@@ -10,6 +10,8 @@ body {
     font-weight: 300;
 }
 
+/* Description Rules */
+/* Parallax-Like Effect */
 .description-container {
     min-height: 50vh;
     font-size: 2em;
@@ -31,8 +33,12 @@ body {
     }
 }
 
+/* Hero Image Rules */
 .hero {
-
+    /* the 'vh' unit asks the browser to */
+    /* return the height of the viewport */
+    /* we can then use that to set the height of an element */
+    /* as a percentage of the viewport height (vh) */
     height: 100vh;
     min-height: 740px;
     background-image: url("imgs/water2.jpg");
@@ -125,6 +131,7 @@ body {
     }
 }
 
+/* Menu Rules */
 .menu {
     box-sizing: border-box;
     min-height: 100vh;
