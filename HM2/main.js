@@ -1,0 +1,1 @@
+console.log("My three favorite websites are gamesworkshop, amazon, and youtube. My three favorite games are Terraria, Darksouls, and Pictionary. My three favorite artists are The Beatles, Queen, and Michaelangelo. Each of these artists have had profound and imapactful works in their times and revolutionized their fields.");
