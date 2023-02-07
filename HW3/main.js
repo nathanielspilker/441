@@ -6,64 +6,69 @@ function storyFunction(choice) {
         document.getElementById("choice1").innerHTML = "Avoid It";
         document.getElementById("choice2").innerHTML = "Attack";
     } else if (choice == 2 && answer2 == "No") {
-        document.getElementById("story").innerHTML = "Pugster starts to back out, but then something in the back of Pugster's mind says 'Wait!'";
-        document.getElementById("choice1").innerHTML = "Go ahead and be brave";
-        document.getElementById("choice2").innerHTML = "Scan the situation";
-    } else if (choice == 1 && answer1 == "Meet others") {
-        document.getElementById("story").innerHTML = "Pugster walks over to a group of dogs and says hello.  Pugster is trying to decide who is genuine or not.";
-        document.getElementById("choice1").innerHTML = "Evaluate all dogs";
-        document.getElementById("choice2").innerHTML = "Stay clear";
-    } else if (choice == 2 && answer2 == "Walk alone") {
-        document.getElementById("story").innerHTML = "Pugster starts to walk over to the dogs and then decides to go to the water instead.  Now what?'";
-        document.getElementById("choice1").innerHTML = "Go for a swim";
-        document.getElementById("choice2").innerHTML = "Get a drink";
-    } else if (choice == 1 && answer1 == "Go ahead and be brave") {
-        document.getElementById("story").innerHTML = "Pugster decides to go in even with hesitation to make new friends.  Will it work?'";
-        document.getElementById("choice1").innerHTML = "Yes it will work";
-        document.getElementById("choice2").innerHTML = "No it will not work";
-    } else if (choice == 2 && answer2 == "Scan the situation") {
-        document.getElementById("story").innerHTML = "Pugster decides to just look around for the moment. What should Pugster do now?";
-        document.getElementById("choice1").innerHTML = "Watch from afar";
-        document.getElementById("choice2").innerHTML = "Get in closer";
-    }
-    // need to do these
-    else if (choice == 1 && answer1 == "Evaluate all dogs") {
-        document.getElementById("story").innerHTML = "Pugster decides that evaluation is the best option." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 2 && answer2 == "Stay clear") {
-        document.getElementById("story").innerHTML = "Pugster decides staying away is the best option" + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 1 && answer1 == "Go for a swim") {
-        document.getElementById("story").innerHTML = "Pugster decides that swimming sounds most fun" + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 2 && answer2 == "Get a drink") {
-        document.getElementById("story").innerHTML = "Pugster decides it's time to drink" + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 1 && answer1 == "Yes it will work") {
-        document.getElementById("story").innerHTML = "Pugster thinks, yeah this will work out." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 2 && answer2 == "No it will not work") {
-        document.getElementById("story").innerHTML = "Pugster thinks, I don't think this will work out." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 1 && answer1 == "Watch from afar") {
-        document.getElementById("story").innerHTML = "Pugster decides it's time to just watch from a distance for safety." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 2 && answer2 == "Get in closer") {
-        document.getElementById("story").innerHTML = "Pugster decides to get just a little closer, but not engage." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 1 && answer1 == "Yes restart") {
-        document.getElementById("story").innerHTML = "Our fearless leader, 'Pugster' has entered the dog park for the first time. Scared? Yes, but willing to give it a try. Are you ready to start on adventure with Pugster?";
+        document.getElementById("story").innerHTML = "Our heroes take a moment to search for another entrance, finding a dark, ominous pit. What now?";
+        document.getElementById("choice1").innerHTML = "Cannon Ball!";
+        document.getElementById("choice2").innerHTML = "Go Home";
+
+    } else if (choice == 1 && answer1 == "Avoid It") {
+        document.getElementById("story").innerHTML = "You decide to take a hint of caution as you circle around the slime. You see a pile of gold ahead, the dragon's hoard! What do you do?";
+        document.getElementById("choice1").innerHTML = "We're Rich!";
+        document.getElementById("choice2").innerHTML = "Kill the Dragon!";
+    } else if (choice == 2 && answer2 == "Attack") {
+        document.getElementById("story").innerHTML = "The heroes attack the slime with their swords and spells, but it is not effective! Do you retreat or continue the fight?";
+        document.getElementById("choice1").innerHTML = "Retreat";
+        document.getElementById("choice2").innerHTML = "Fight";
+
+    } else if (choice == 1 && answer1 == "Cannon Ball!") {
+        document.getElementById("story").innerHTML = "Our heroes dive into the pit with reckless abandon, landing in the chamber of the sleeping Dragon! How might we slay the beast!?'";
+        document.getElementById("choice1").innerHTML = "Swords!";
+        document.getElementById("choice2").innerHTML = "Magic!";
+    } else if (choice == 2 && answer2 == "Go Home") {
+        document.getElementById("story").innerHTML = "The heroes go home, but are stumped when their families ask them if they slew the dragon.";
+        document.getElementById("choice1").innerHTML = "Tell the Truth";
+        document.getElementById("choice2").innerHTML = "Lie";
+
+    } else if (choice == 1 && answer1 == "We're Rich!") {
+        document.getElementById("story").innerHTML = "The heroes rush to the gold due to greed and are burnt to a crisp by the un-noticed dragon." + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+    } else if (choice == 2 && answer2 == "Kill the Dragon!") {
+        document.getElementById("story").innerHTML = "The heroes rush into the chamber spotting the dragon! It breathes flame and rends them with its mighty claws! Our heroes did not prepare enough!" + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+
+    } else if (choice == 1 && answer1 == "Retreat") {
+        document.getElementById("story").innerHTML = "The heroes recognize that their mission has failed and exit the dungeon in shame." + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+    } else if (choice == 2 && answer2 == "Fight") {
+        document.getElementById("story").innerHTML = "The heroes give it their all but succumb to the acid of the slime none the less." + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+
+    } else if (choice == 1 && answer1 == "Swords!") {
+        document.getElementById("story").innerHTML = "The heroes rush the sleeping dragon, slicing it with their swords and claiming victory! The day is yours!" + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+    } else if (choice == 2 && answer2 == "Magic!") {
+        document.getElementById("story").innerHTML = "The heroes cast their sorceries and blast the beast with lightning, vaoprizing it in an instant! The day is yours!" + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+
+    } else if (choice == 1 && answer1 == "Tell the Truth") {
+        document.getElementById("story").innerHTML = "Our heroes were honest to their families, and the families were thankfull for their honesty, but afraid of the dragon menace..." + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+    } else if (choice == 2 && answer2 == "Lie") {
+        document.getElementById("story").innerHTML = "The heroes lied to their families, being celebrated as champions! But the guilt never left them..." + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+
+    } else if (choice == 1 && answer1 == "Restart") {
+        document.getElementById("story").innerHTML = "The brave heroes set off to slay the dragon, but must overcome many challenges along the way. Dare you enter the dark depths of this dungeon?";
         document.getElementById("choice1").innerHTML = "Yes";
         document.getElementById("choice2").innerHTML = "No";
-    } else if (choice == 2 && answer2 == "No quit") {
-        document.getElementById("story").innerHTML = "Pugster thanks you!";
+    } else if (choice == 2 && answer2 == "Quit") {
+        document.getElementById("story").innerHTML = "The dungeon lies still...";
     }
 }
