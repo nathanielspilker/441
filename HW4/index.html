@@ -9,7 +9,7 @@
         {
             var myChoice = document.getElementById("choice").value;
             var myQuestion = document.getElementById("question");
-            if(myChoice === "Green")
+            if(myChoice === "I know")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
@@ -17,17 +17,17 @@
                 document.getElementById("choice2").style.display="block";
                 document.getElementById("btnSubmit2").style.display="block";
 
-
-                myQuestion.innerHTML = "Green is a great choice. Is the color of generosity. Would you be willing to give food to those in need?";
+                myQuestion.innerHTML = "I knew you could do it! Would you say you enjoy riddles?";
             }
-            else if(myChoice === "Blue")
+            else if(myChoice === "I don't know")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
 
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
-                myQuestion.innerHTML = "Blue is the color of loyalty and sincerity.  Are you willing to show up and stand by those who need a friend?";
+
+                myQuestion.innerHTML = "That's unfortunate to hear. Would you say you enjoy riddles?";
 
             }
             else
@@ -42,12 +42,12 @@
             var myQuestion = document.getElementById("question");
             if(answer === "yes")
             {
-                document.getElementById("mainImage").src = "grateful.jpg"
-                myQuestion.innerHTML = "Thank you for your kindness!";
+                document.getElementById("mainImage").src = "open door.jpg"
+                myQuestion.innerHTML = "You have made me doubly happy this day, please enter!";
             }
             else if(answer === "no")
             {
-                myQuestion.innerHTML = "Please remember we are all in this together.";
+                myQuestion.innerHTML = "That's a shame, but you may still enter!";
             }
         }
 
@@ -57,12 +57,12 @@
             var myQuestion = document.getElementById("question");
             if(answer === "yes")
             {
-                document.getElementById("mainImage").src = "together.jpg"
-                myQuestion.innerHTML = "Thank you for your kindness!";
+                document.getElementById("mainImage").src = "brick wall.jpg"
+                myQuestion.innerHTML = "While that makes me happy, you may never enter this place!";
             }
             else if(answer === "no")
             {
-                myQuestion.innerHTML = "Please remember we are all in this together.";
+                myQuestion.innerHTML = "You will never gain access to this new world!";
             }
         }
     </script>
@@ -70,18 +70,18 @@
 
         <h1>Into the void</h1>
         <br>
-        <img src="tree.jpeg" id="mainImage">
+        <img src="open door.jpg" id="mainImage">
     <div id="question">
     <br>
-        It was a dark and lonely time in Bob's life. He was wandering aimlessly and wondering where to go.
+        You are walking down an alley when a magical door appears!
         <br>
-        He came upon a tree and it asked him what his favorite color was.
+        The door asks you a riddle: What has a head and a tail, but no legs?
         <br>
-        He had only two choices.  It was Green or Blue.
+        You have two choices: I know or I don't know.
     </div>
 
         <br>
-        <input type="text" size="30" id="choice" value="Please enter Green or Blue">
+        <input type="text" size="30" id="choice" value="Please enter I know or I don't know">
         <button id="btnSubmit" onclick="getChoice1();">Click to continue</button>
 
         <input type="text" size="30" id="choice2" value="Enter yes or no." style="display:none">
