@@ -10,7 +10,7 @@ body{
 	display: table-row;
 }
 .divTableHeading {
-	background-color: #EEE;
+	background-color:blue;
 	display: table-header-group;
 }
 .divTableCell, .divTableHead {
@@ -19,12 +19,12 @@ body{
 	padding: 3px 10px;
 }
 .divTableHeading {
-	background-color: #EEE;
+	background-color:blue;
 	display: table-header-group;
 	font-weight: bold;
 }
 .divTableFoot {
-	background-color: #EEE;
+	background-color:blue;
 	display: table-footer-group;
 	font-weight: bold;
 }

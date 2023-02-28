@@ -1,5 +1,5 @@
 // create an array of image names that correspond to the image tags
-var imageTags = ["image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10" ];
+var imageTags = ["image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10"];
 // create a variable with the blank image name
 var blankImagePath = "QuestionMark.jpg";
 // create a empty array for the actual images
@@ -33,7 +33,7 @@ function createRandomImageArray()
         var randomNumber = Math.floor(Math.random() * actualImagePath.length)
           // create an if statement that says if the total number added is less than 2, then
         // add the image to the actual image array
-        if(count[randomNumber] < 2)
+        if(count[randomNumber] < 5)
         {
             actualImages.push(actualImagePath[randomNumber]);
             // then add one to the array that makes sure only two images can be added
