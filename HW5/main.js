@@ -18,7 +18,7 @@ function createRandomImageArray()
 {
     var actualImagePath = ["bomb.jpg", "smile.jpg"];
     var count = [0,0];
-    while(actualImages.length < 10)
+    while(actualImages.length < 4)
     {
         var randomNumber = Math.floor(Math.random() * actualImagePath.length)
         if(count[randomNumber] < 2)
