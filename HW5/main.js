@@ -76,7 +76,7 @@ function addToPlayer()
     player.lastname = lastName;
     player.age = age;
     localStorage.setItem("playerInfo", JSON.stringify(player));
-    window.location = "middle.html";
+    window.location = "intro.html";
 }
 function playerInfo()
 {
