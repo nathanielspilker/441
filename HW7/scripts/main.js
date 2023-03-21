@@ -24,24 +24,6 @@ class ViewFinder
         return this.title;
     }
 
-    constructor(description)
-    {
-        this.description = description;
-    }
-
-    // this just returns the title concatenated with the string "Title"
-    // keep in mind only one return statement can exist in a function
-    toString()
-    {
-        return "Description: " + this.description;
-    }
-
-    // this is the property theTitle which returns the title as well only the title
-    get theDescription()
-    {
-        return this.description;
-    }
-
 }
 
 // this function is called in the body of the HTML page so that the objects are created and added to the
@@ -53,17 +35,10 @@ function initializeArray()
     // create a second object from the class ViewFinder
     var myViewFinder1 = new ViewFinder("A really angry tiger");
 
-    var myViewFinder2 = new ViewFinder("Hey");
-
-    var myViewFinder3 = new ViewFinder("Howdy");
-    // add the first object to the array
     myViewFinderArray.push(myViewFinder);
     // add the second object to the array
     myViewFinderArray.push(myViewFinder1);
 
-    myViewFinderArray.push(myViewFinder2);
-
-    myViewFinderArray.push(myViewFinder3);
 
 }
 
@@ -75,7 +50,5 @@ function accessInformation()
     // get a random object from the array
     // calling the toString, but we could have gotten the property theTitle as well
     document.getElementById("title").innerHTML = myViewFinderArray[randomNumber].toString();
-
-    document.getElementById("description").innerHTML = myViewFinderArray[randomNumber].toString();
 
 }
