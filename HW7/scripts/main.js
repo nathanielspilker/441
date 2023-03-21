@@ -53,9 +53,9 @@ function initializeArray()
     // create a second object from the class ViewFinder
     var myViewFinder1 = new ViewFinder("A really angry tiger");
 
-    var myViewFinder = new ViewFinder("Hey");
+    var myViewFinder2 = new ViewFinder("Hey");
 
-    var myViewFinder = new ViewFinder("Howdy");
+    var myViewFinder3 = new ViewFinder("Howdy");
     // add the first object to the array
     myViewFinderArray.push(myViewFinder);
     // add the second object to the array
