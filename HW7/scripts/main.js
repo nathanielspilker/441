@@ -24,6 +24,24 @@ class ViewFinder
         return this.title;
     }
 
+    constructor(description)
+    {
+        this.description = description;
+    }
+
+    // this just returns the title concatenated with the string "Title"
+    // keep in mind only one return statement can exist in a function
+    toString()
+    {
+        return "Description: " + this.description;
+    }
+
+    // this is the property theTitle which returns the title as well only the title
+    get theDescription()
+    {
+        return this.description;
+    }
+
 }
 
 // this function is called in the body of the HTML page so that the objects are created and added to the
