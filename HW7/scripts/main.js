@@ -76,4 +76,6 @@ function accessInformation()
     // calling the toString, but we could have gotten the property theTitle as well
     document.getElementById("title").innerHTML = myViewFinderArray[randomNumber].toString();
 
+    document.getElementById("description").innerHTML = myViewFinderArray[randomNumber].toString();
+
 }
