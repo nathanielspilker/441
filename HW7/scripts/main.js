@@ -6,9 +6,13 @@ class ViewFinder
 {
     // the constructor requires only one title, the description, imagePath, etc.
     // we will create multiple objects from this class
-    constructor(title)
+    constructor(title, image, description, author, imageyear )
     {
         this.title = title;
+        this.image = image;
+        this.description = description;
+        this.author = author;
+        this.imageyear = imageyear;
     }
 
     // this just returns the title concatenated with the string "Title"
@@ -16,12 +20,32 @@ class ViewFinder
     toString()
     {
         return "Title: " + this.title;
+        return "Image; " + this.image;
+        return "Description; " + this.description
+        return "Author; " + this.author
+        return "Imageyear; " + this.imageyear
     }
 
-    // this is the property theTitle which returns the title as well only the title
+
     get theTitle()
     {
         return this.title;
+    }
+    get theImage()
+    {
+        return this.image;
+    }
+    get theDescription()
+    {
+        return this.description;
+    }
+    get theAuthor()
+    {
+        return this.author;
+    }
+    get theImageyear()
+    {
+        return this.imageyear;
     }
 
 }
@@ -50,5 +74,9 @@ function accessInformation()
     // get a random object from the array
     // calling the toString, but we could have gotten the property theTitle as well
     document.getElementById("title").innerHTML = myViewFinderArray[randomNumber].toString();
+    document.getElementById("image").innerHTML = myViewFinderArray[randomNumber].toString();
+    document.getElementById("description").innerHTML = myViewFinderArray[randomNumber].toString();
+    document.getElementById("author").innerHTML = myViewFinderArray[randomNumber].toString();
+    document.getElementById("imageyear").innerHTML = myViewFinderArray[randomNumber].toString();
 
 }
