@@ -35,8 +35,9 @@ $(document).ready(function(){
     console.log(allDogs[0].theSelector);
     console.log(allDogs[0].theImagePath);
 
-    //$(allDogs[0].theSelector).src = allDogs[0].theImagePath;
-    //$("#my_image").attr("src","second.jpg");
+    $(allDogs[0].theSelector).src = allDogs[0].theImagePath;
+    $("#my_image").attr("src","cat.jpg");
+
     $(allDogs[0].theSelector).attr("src", allDogs[0].theImagePath);
 
     $("button").click(function(){
@@ -45,6 +46,7 @@ $(document).ready(function(){
 
         $("#third").toggle();
            setInterval(moveSquare, 1000);
+           setInterval(moveTriangle, 2000);
 
         $(allDogs[0].theSelector).fadeOut().fadeIn();
 
@@ -55,4 +57,9 @@ $(document).ready(function(){
 function moveSquare()
 {
     $("#square").animate({left:250}).animate({top:400}).animate({left:0}).animate({top:300}).fadeOut();
+}
+
+function moveTriangle()
+{
+    $("#triangle").animate({left:250}).animate({top:400}).animate({left:0}).animate({top:300}).fadeOut();
 }
