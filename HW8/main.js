@@ -1,6 +1,6 @@
-var dogSelector = "#dog";
-var allDogs = new Array();
-class DogInfo{
+var catSelector = "#cat";
+var allCats = new Array();
+class CatInfo{
     constructor(selector, imagePath)
     {
         this.selector = selector;
@@ -24,21 +24,18 @@ class DogInfo{
 function initializeArray()
 {
 
-    var dog = new DogInfo("#dog", "dog.jpg");
-    allDogs.push(dog);
+    var cat = new CatInfo("#cat", "cat.jpg");
+    allCats.push(cat);
 
 }
 $(document).ready(function(){
     initializeArray();
-    console.log(allDogs.length);
-    console.log(allDogs[0].toString());
-    console.log(allDogs[0].theSelector);
-    console.log(allDogs[0].theImagePath);
+    console.log(allCats.length);
+    console.log(allCats[0].toString());
+    console.log(allCats[0].theSelector);
+    console.log(allCats[0].theImagePath);
 
-    $(allDogs[0].theSelector).src = allDogs[0].theImagePath;
-    $("#my_image").attr("src","cat.jpg");
-
-    $(allDogs[0].theSelector).attr("src", allDogs[0].theImagePath);
+    $(allCats[0].theSelector).attr("src", allCats[0].theImagePath);
 
     $("button").click(function(){
 
@@ -46,9 +43,8 @@ $(document).ready(function(){
 
         $("#third").toggle();
            setInterval(moveSquare, 1000);
-           setInterval(moveTriangle, 2000);
 
-        $(allDogs[0].theSelector).fadeOut().fadeIn();
+        $(allCats[0].theSelector).fadeOut().fadeIn();
 
     });
 
@@ -57,9 +53,4 @@ $(document).ready(function(){
 function moveSquare()
 {
     $("#square").animate({left:250}).animate({top:400}).animate({left:0}).animate({top:300}).fadeOut();
-}
-
-function moveTriangle()
-{
-    $("#triangle").animate({left:250}).animate({top:400}).animate({left:0}).animate({top:300}).fadeOut();
 }
