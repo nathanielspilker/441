@@ -7,13 +7,10 @@
     top: 400;
   }
 
-  #cat {
-      width: 400px;
-      height: 400px;
-      position: absolute;
-      left: 0;
-      top: 500;
-    }
+   cat.jpg{
+     width: 200px;
+     height: 200px;
+}
 
   .stuff{
     background: gold;
