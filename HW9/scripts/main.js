@@ -27,10 +27,3 @@ let bike = {
                 + bike.owner.lastName + "<br>Sizes Available:<br>" +
                 bike.sizes[0] + "<br>" + bike.sizes[1] + "<br>" + bike.sizes[2] + "<br>" + bike.sizes[3]);
             }
-            $("button").click(function(){
-  $.getJSON("jsonajax.js", function(result){
-    $.each(result, function(i, field){
-      $("div").append(field + " ");
-    });
-  });
-});
