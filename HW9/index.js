@@ -8,7 +8,7 @@ $("#get-data").on("click", (e) => {
 
   $showData.text("Loading the JSON file.");
 
-  $.getJSON("example.json", (data) => {
+  $.getJSON("./src/example.json", (data) => {
     console.log(data);
     const markup = data.items
       .map((item) => `<li>${item.key}: ${item.value}</li>`)
