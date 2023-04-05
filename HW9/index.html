@@ -12,6 +12,16 @@ $(document).ready(function(){
     });
   });
 });
+$.fn.bluey = function () {
+            this.css("background-color", "blue");
+        };
+
+        $(function () {
+            $("button").click(function () {
+                $("#changeDiv").bluey();
+            });
+
+        });
 </script>
 </head>
 <body>
