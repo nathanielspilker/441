@@ -13,11 +13,23 @@ $(document).ready(function(){
     });
   });
 });
+$.fn.bluey = function () {
+            this.css("background-color", "blue");
+            this.css("color", "white");
+            this.css("font-size", 24);
+        };
+
+        $(function () {
+            $("button").click(function () {
+                $("ISS DATA").bluey();
+            });
+
+        });
 </script>
 </head>
 <body>
 
-<button>ISS DATA 2</button>
+<button>ISS DATA</button>
 
 <div></div>
 
