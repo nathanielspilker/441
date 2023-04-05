@@ -3,16 +3,25 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.getJSON("space.json", function(result){
+      $.each(result, function(i, field){
+        $("div").append(field + " ");
+      });
+    });
+  });
+});
 $.fn.bluey = function () {
-            this.css("background-color", "blue");
-        };
+           this.css("background-color", "blue");
+       };
 
-        $(function () {
-            $("button").click(function () {
-                $("#changeDiv").bluey();
-            });
+       $(function () {
+           $("button").click(function () {
+               $("#changeDiv").bluey();
+           });
 
-        });
+       });
 </script>
 </head>
 <body>
