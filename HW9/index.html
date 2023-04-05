@@ -6,28 +6,17 @@
 $(document).ready(function(){
   $("button").click(function(){
     $.getJSON("space.json", function(result){
-      console.log(result);
       $.each(result, function(i, field){
         $("div").append(field + " ");
       });
     });
   });
 });
-$.fn.bluey = function () {
-           this.css("background-color", "blue");
-       };
-
-       $(function () {
-           $("button").click(function () {
-               $("#changeDiv").bluey();
-           });
-
-       });
 </script>
 </head>
 <body>
 
-<button>Get JSON data</button>
+<button>Get Pokemon Data</button>
 
 <div></div>
 
