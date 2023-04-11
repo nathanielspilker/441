@@ -66,9 +66,9 @@ function moveRight() {
 }
 function hasCollided(object1, object2) {
     return !(
-        ((square1.y + square1.height) < (border.y)) ||
-        (square1.y > (border.y + border.height)) ||
-        ((square1.x + square1.width) < border.x) ||
-        (square1.x > (border.x + border.width))
+        ((object1.y + object1.height) < (object2.y)) ||
+        (object1.y > (object2.y + object2.height)) ||
+        ((object1.x + object1.width) < object2.x) ||
+        (object1.x > (object2.x + object2.width))
     );
 }
