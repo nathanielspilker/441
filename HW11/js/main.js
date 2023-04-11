@@ -56,10 +56,13 @@ function getKey(event) {
         // change the background color
         canvas.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")";
         // change the size of the squares
-        square1.setWidth(square1.theWidth - 1);
-        square1.setHeight(square1.theHeight - 1);
-        square2.setWidth(square2.theWidth + 1);
-        square2.setHeight(square2.theHeight + 1);
+        square1.setWidth(square1.theWidth - 10);
+        square1.setHeight(square1.theHeight - 10);
+        square2.setWidth(square2.theWidth + 10);
+        square2.setHeight(square2.theHeight + 10);
+    }
+    {
+      window.alert("ouch!");
     }
     // move the first square depending on what key was pressed
     var char = event.which || event.keyCode;
