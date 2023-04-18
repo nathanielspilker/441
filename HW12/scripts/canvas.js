@@ -64,12 +64,12 @@ function getKey(event)
         direction = "right";
     }
     var test = hasCollided(square1,square2);
-    var test2 = true;
+    var test2 = false;
     for(var i = 0; i < squareArray.length; i++)
     {
 
         test2 = hasCollided(square1,squareArray[i]);
-        if(test2 == false)
+        if(test2 == true)
         {
             break;
         }
