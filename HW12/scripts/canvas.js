@@ -6,7 +6,7 @@ var square1, square2;
 var direction;
 var questions;
 var squareArray = [];
-var lives = 3;
+var score = 0;
 $(document).ready(function(){
 
     setup();
@@ -74,11 +74,10 @@ function getKey(event)
             break;
         }
 
-        //console.log(test2);
     }
     if(test || test2)
     {
-        lives--;
+        score--;
         if(direction == "left")
         {
             moveRight();
@@ -132,7 +131,7 @@ function drawSquare()
     }
 
     ctx.font = "30px Arial";
-    ctx.fillText("Lives: " + lives, 10, 50);
+    ctx.fillText("score: " + score, 10, 50);
 
 }
 
