@@ -21,7 +21,7 @@ var config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 300 },
+            gravity: { y: 100 },
             debug: false
         }
     },
@@ -80,7 +80,7 @@ function create ()
     spikes.create(300, 300, 'spike').setScale(1).refreshBody();
 
     spikes.create(500, 400, 'spike');
-    spikes.create(700, 200, 'spike');
+    spikes.create(700, 70, 'spike');
 
 
     // The player and its settings
