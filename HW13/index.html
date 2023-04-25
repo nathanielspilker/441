@@ -35,6 +35,7 @@ var config = {
 var player;
 var stars;
 var bombs;
+var spikes;
 var platforms;
 var cursors;
 var score = 0;
@@ -49,6 +50,7 @@ function preload ()
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
+    this.load.image('spike', 'assets/spikedball.png');
     this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
 }
 
@@ -70,6 +72,14 @@ function create ()
     platforms.create(750, 220, 'ground');
     platforms.create(500, 300, 'ground');
     platforms.create(300, 150, 'ground');
+
+    spikes = this.physics.add.staticGroup();
+
+    spikes.create(100, 130, 'spike').setScale(2).refreshBody();
+
+    spikes.create(310, 160, 'spike');
+    spikes.create(60, 260, 'spike');
+
 
     // The player and its settings
     player = this.physics.add.sprite(100, 450, 'dude');
@@ -130,6 +140,8 @@ function create ()
     this.physics.add.overlap(player, stars, collectStar, null, this);
 
     this.physics.add.collider(player, bombs, hitBomb, null, this);
+
+    this.physics.add.collider(player, spikes, hitSpike, null, this);
 }
 
 function update ()
@@ -193,6 +205,17 @@ function collectStar (player, star)
 }
 
 function hitBomb (player, bomb)
+{
+    this.physics.pause();
+
+    player.setTint(0xff0000);
+
+    player.anims.play('turn');
+
+    gameOver = true;
+}
+
+function hitSpike (player, spikes)
 {
     this.physics.pause();
 
