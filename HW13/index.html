@@ -34,6 +34,7 @@ var config = {
 
 var player;
 var stars;
+var melons;
 var bombs;
 var spikes;
 var platforms;
@@ -51,6 +52,7 @@ function preload ()
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
     this.load.image('spike', 'assets/spikedball.png');
+    this.load.image('melon', 'assets/melon.png');
     this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
 }
 
@@ -75,10 +77,10 @@ function create ()
 
     spikes = this.physics.add.staticGroup();
 
-    spikes.create(500, 300, 'spike').setScale(1).refreshBody();
+    spikes.create(300, 300, 'spike').setScale(1).refreshBody();
 
-    spikes.create(300, 800, 'spike');
-    spikes.create(400, 600, 'spike');
+    spikes.create(500, 400, 'spike');
+    spikes.create(700, 200, 'spike');
 
 
     // The player and its settings
@@ -126,6 +128,20 @@ function create ()
 
     });
 
+    melons = this.physics.add.group({
+        key: 'melon',
+        repeat: 3,
+        setXY: { x: 12, y: 0, stepX: 70 }
+    });
+
+    melons.children.iterate(function (child) {
+
+        //  Give each star a slightly different bounce
+        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+
+    });
+
+
     bombs = this.physics.add.group();
 
     //  The score
@@ -135,6 +151,7 @@ function create ()
     this.physics.add.collider(player, platforms);
     this.physics.add.collider(stars, platforms);
     this.physics.add.collider(bombs, platforms);
+    this.physics.add.collider(melons, platforms);
 
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
     this.physics.add.overlap(player, stars, collectStar, null, this);
@@ -142,6 +159,8 @@ function create ()
     this.physics.add.collider(player, bombs, hitBomb, null, this);
 
     this.physics.add.collider(player, spikes, hitSpike, null, this);
+
+    this.physics.add.overlap(player, stars, collectMelon, null, this);
 }
 
 function update ()
@@ -188,6 +207,34 @@ function collectStar (player, star)
     {
         //  A new batch of stars to collect
         stars.children.iterate(function (child) {
+
+            child.enableBody(true, child.x, 0, true, true);
+
+        });
+
+        var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+
+        var bomb = bombs.create(x, 16, 'bomb');
+        bomb.setBounce(1);
+        bomb.setCollideWorldBounds(true);
+        bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+        bomb.allowGravity = false;
+
+    }
+}
+
+function collectMelon (player, melon)
+{
+    melon.disableBody(true, true);
+
+    //  Add and update the score
+    score += 20;
+    scoreText.setText('Score: ' + score);
+
+    if (melons.countActive(true) === 0)
+    {
+        //  A new batch of stars to collect
+        melons.children.iterate(function (child) {
 
             child.enableBody(true, child.x, 0, true, true);
 
