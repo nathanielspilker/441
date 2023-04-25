@@ -79,7 +79,7 @@ function create ()
 
     spikes.create(300, 300, 'spike').setScale(1).refreshBody();
 
-    spikes.create(500, 600, 'spike');
+    spikes.create(500, 500, 'spike');
     spikes.create(700, 70, 'spike');
 
 
@@ -131,7 +131,7 @@ function create ()
     melons = this.physics.add.group({
         key: 'melon',
         repeat: 3,
-        setXY: { x: 12, y: 0, stepX: 70 }
+        setXY: { x: 15, y: 0, stepX: 70 }
     });
 
     melons.children.iterate(function (child) {
@@ -160,7 +160,7 @@ function create ()
 
     this.physics.add.collider(player, spikes, hitSpike, null, this);
 
-    this.physics.add.overlap(player, stars, collectMelon, null, this);
+    this.physics.add.overlap(player, melons, collectMelon, null, this);
 }
 
 function update ()
