@@ -1,6 +1,6 @@
-var umSelector = "#UM";
-var UM = new Array();
-class UMInfo{
+var dogSelector = "#dog";
+var allDogs = new Array();
+class DogInfo{
     constructor(selector, imagePath)
     {
         this.selector = selector;
@@ -17,31 +17,37 @@ class UMInfo{
 
     toString()
     {
-        return this.selector + ":" + this.imagePath;
+        return this.selector + ":" + this.imagePath; 
     }
 }
 
 function initializeArray()
 {
 
-    var um = new CatInfo("#um", "um.jpg");
-    UM.push(um);
+    var dog = new DogInfo("#dog", "images/cat.jpg");
+    allDogs.push(dog);
 
 }
 $(document).ready(function(){
     initializeArray();
-    console.log(UM.length);
-    console.log(UM[0].toString());
-    console.log(UM[0].theSelector);
-    console.log(UM[0].theImagePath);
-
-    $(UM[0].theSelector).attr("src", UM[0].theImagePath);
+    console.log(allDogs.length);
+    console.log(allDogs[0].toString());
+    console.log(allDogs[0].theSelector);
+    console.log(allDogs[0].theImagePath);
+    
+    //$(allDogs[0].theSelector).src = allDogs[0].theImagePath;
+    //$("#my_image").attr("src","second.jpg");
+    $(allDogs[0].theSelector).attr("src", allDogs[0].theImagePath);
 
     $("button").click(function(){
-
+       
         $(".stuff").fadeOut();
-        $(UM[0].theSelector).fadeOut();
 
+        $("#third").toggle();
+           setInterval(moveSquare, 1000);
+        
+        $(allDogs[0].theSelector).fadeOut().fadeIn();
+        
     });
-
+    
 });
