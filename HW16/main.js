@@ -24,7 +24,7 @@ class DogInfo{
 function initializeArray()
 {
 
-    var dog = new DogInfo("#dog", "images/cat.jpg");
+    var dog = new DogInfo("#dog", "um.jpg");
     allDogs.push(dog);
 
 }
@@ -42,11 +42,6 @@ $(document).ready(function(){
     $("button").click(function(){
        
         $(".stuff").fadeOut();
-
-        $("#third").toggle();
-           setInterval(moveSquare, 1000);
-        
-        $(allDogs[0].theSelector).fadeOut().fadeIn();
         
     });
     
