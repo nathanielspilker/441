@@ -1,22 +1,22 @@
 cat.jpg{
-   width: 200px;
-   height: 200px;
+   width: 400px;
+   height: 400px;
    text-align: center
 }
 
 .stuff{
-  background: beige;
+  background: gray;
   color:black;
   text-align: center
 }
 
 #third{
-  background: beige;
+  background: gray;
   color:black;
   text-align: center
 }
 
 body{
-    background-color: beige;
+    background-color: gray;
     text-align: center
 }

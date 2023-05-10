@@ -1,6 +1,6 @@
-var catSelector = "#cat";
-var allCats = new Array();
-class CatInfo{
+var umSelector = "#UM";
+var UM = new Array();
+class UMInfo{
     constructor(selector, imagePath)
     {
         this.selector = selector;
@@ -24,23 +24,23 @@ class CatInfo{
 function initializeArray()
 {
 
-    var cat = new CatInfo("#cat", "cat.jpg");
-    allCats.push(cat);
+    var um = new CatInfo("#um", "um.jpg");
+    UM.push(um);
 
 }
 $(document).ready(function(){
     initializeArray();
-    console.log(allCats.length);
-    console.log(allCats[0].toString());
-    console.log(allCats[0].theSelector);
-    console.log(allCats[0].theImagePath);
+    console.log(UM.length);
+    console.log(UM[0].toString());
+    console.log(UM[0].theSelector);
+    console.log(UM[0].theImagePath);
 
-    $(allCats[0].theSelector).attr("src", allCats[0].theImagePath);
+    $(UM[0].theSelector).attr("src", UM[0].theImagePath);
 
     $("button").click(function(){
 
         $(".stuff").fadeOut();
-        $(allCats[0].theSelector).fadeOut();
+        $(UM[0].theSelector).fadeOut();
 
     });
 
