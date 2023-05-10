@@ -4,15 +4,15 @@ cat.jpg{
 }
 
 .stuff{
-  background: gold;
-  color:white;
+  background: beige;
+  color:black;
 }
 
 #third{
-  background: silver;
-  color:white;
+  background: beige;
+  color:black;
 }
 
 body{
-    background-color: maroon;
+    background-color: beige;
 }

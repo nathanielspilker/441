@@ -40,7 +40,7 @@ $(document).ready(function(){
     $("button").click(function(){
 
         $(".stuff").fadeOut();
-        $(allCats[0].theSelector).fadeOut().fadeIn();
+        $(allCats[0].theSelector).fadeOut();
 
     });
 
