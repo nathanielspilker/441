@@ -24,7 +24,7 @@ class DogInfo{
 function initializeArray()
 {
 
-    var dog = new DogInfo("#dog", "cat.jpg");
+    var dog = new DogInfo("#dog", "um.jpg");
     allDogs.push(dog);
 
 }
