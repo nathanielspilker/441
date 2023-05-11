@@ -42,6 +42,10 @@ $(document).ready(function(){
     $("button").click(function(){
        
         $(".stuff").fadeOut();
+
+        $("#third").toggle();
+        
+        $(allDogs[0].theSelector).fadeOut().fadeIn();
         
     });
     
