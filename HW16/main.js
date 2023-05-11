@@ -24,8 +24,8 @@ class DogInfo{
 function initializeArray()
 {
 
-    var dog = new DogInfo("#dog", "um.jpg");
-    allDogs.push(dog);
+    var logo = new DogInfo("#dog", "um.jpg");
+    allDogs.push(logo);
 
 }
 $(document).ready(function(){
