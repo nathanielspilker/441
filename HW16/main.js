@@ -1,6 +1,6 @@
-var dogSelector = "#dog";
-var allDogs = new Array();
-class DogInfo{
+var logoSelector = "#logo";
+var alllogos = new Array();
+class LogoInfo{
     constructor(selector, imagePath)
     {
         this.selector = selector;
@@ -24,20 +24,18 @@ class DogInfo{
 function initializeArray()
 {
 
-    var dog = new DogInfo("#dog", "um.jpg");
-    allDogs.push(dog);
+    var logo = new LogoInfo("#logo", "um.jpg");
+    allLogos.push(logo);
 
 }
 $(document).ready(function(){
     initializeArray();
-    console.log(allDogs.length);
-    console.log(allDogs[0].toString());
-    console.log(allDogs[0].theSelector);
-    console.log(allDogs[0].theImagePath);
+    console.log(allLogos.length);
+    console.log(allLogos[0].toString());
+    console.log(allLogos[0].theSelector);
+    console.log(allLogos[0].theImagePath);
     
-    //$(allDogs[0].theSelector).src = allDogs[0].theImagePath;
-    //$("#my_image").attr("src","second.jpg");
-    $(allDogs[0].theSelector).attr("src", allDogs[0].theImagePath);
+    $(allLogos[0].theSelector).attr("src", allLogos[0].theImagePath);
 
     $("button").click(function(){
        
@@ -45,7 +43,7 @@ $(document).ready(function(){
 
         $("#third").toggle();
         
-        $(allDogs[0].theSelector).fadeOut().fadeIn();
+        $(allLogos[0].theSelector).fadeOut().fadeIn();
         
     });
     
