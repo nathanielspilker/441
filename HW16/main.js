@@ -1,4 +1,4 @@
-var dogSelector = "#dog";
+var dogSelector = "#logo";
 var allDogs = new Array();
 class DogInfo{
     constructor(selector, imagePath)
@@ -24,7 +24,7 @@ class DogInfo{
 function initializeArray()
 {
 
-    var dog = new DogInfo("#dog", "um.jpg");
+    var dog = new DogInfo("#logo", "um.jpg");
     allDogs.push(dog);
 
 }
