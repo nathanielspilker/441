@@ -35,6 +35,8 @@ $(document).ready(function(){
     console.log(allDogs[0].theSelector);
     console.log(allDogs[0].theImagePath);
     
+    //$(allDogs[0].theSelector).src = allDogs[0].theImagePath;
+    //$("#my_image").attr("src","second.jpg");
     $(allDogs[0].theSelector).attr("src", allDogs[0].theImagePath);
 
     $("button").click(function(){
@@ -43,7 +45,7 @@ $(document).ready(function(){
 
         $("#third").toggle();
         
-        $(allDogss[0].theSelector).fadeOut().fadeIn();
+        $(allDogs[0].theSelector).fadeOut().fadeIn();
         
     });
     
