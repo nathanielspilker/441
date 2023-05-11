@@ -1,22 +1,18 @@
 um.jpg{
    width: 400px;
    height: 400px;
-   text-align: center
 }
 
 .stuff{
-  background: gray;
+  background: maroon;
   color:black;
-  text-align: center
 }
 
 #third{
-  background: gray;
+  background: maroon;
   color:black;
-  text-align: center
 }
 
 body{
     background-color: gray;
-    text-align: center
 }
