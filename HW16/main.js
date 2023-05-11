@@ -1,6 +1,6 @@
-var logoSelector = "#logo";
-var alllogos = new Array();
-class LogoInfo{
+var dogSelector = "#dog";
+var allDogs = new Array();
+class DogInfo{
     constructor(selector, imagePath)
     {
         this.selector = selector;
@@ -24,18 +24,18 @@ class LogoInfo{
 function initializeArray()
 {
 
-    var logo = new LogoInfo("#logo", "um.jpg");
-    allLogos.push(logo);
+    var dog = new DogInfo("#dog", "um.jpg");
+    allDogs.push(dog);
 
 }
 $(document).ready(function(){
     initializeArray();
-    console.log(allLogos.length);
-    console.log(allLogos[0].toString());
-    console.log(allLogos[0].theSelector);
-    console.log(allLogos[0].theImagePath);
+    console.log(allDogs.length);
+    console.log(allDogs[0].toString());
+    console.log(allDogs[0].theSelector);
+    console.log(allDogs[0].theImagePath);
     
-    $(allLogos[0].theSelector).attr("src", allLogos[0].theImagePath);
+    $(allDogs[0].theSelector).attr("src", allDogs[0].theImagePath);
 
     $("button").click(function(){
        
@@ -43,7 +43,7 @@ $(document).ready(function(){
 
         $("#third").toggle();
         
-        $(allLogos[0].theSelector).fadeOut().fadeIn();
+        $(allDogss[0].theSelector).fadeOut().fadeIn();
         
     });
     
